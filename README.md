@@ -1,3 +1,4 @@
-# Kata Challenges
+# Even or Odd function
 
-Switch branches to see each challenge.
+Returns "Even" and "Odd" for even and odd numbers respectively.
+Throws an error in other cases.
