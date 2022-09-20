@@ -2,9 +2,15 @@ const each = require("jest-each").default;
 const { even_or_odd } = require("./even_or_odd");
 
 describe("Even or odds tests", () => {
+    test("Throws error if argument is missing", () => {
+        expect(() => {
+            even_or_odd();
+        }).toThrow(new Error("Function takes 1 argument, 0 provided"))
+    })
+    
     test("Throws error if input is a string", () => {
         expect(() => { 
-   even_or_odd("number")
+            even_or_odd("number")
         }).toThrow(new Error("Input should be an integer"));
     })
 

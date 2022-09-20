@@ -1,4 +1,7 @@
 function even_or_odd(num) {
+    if (num === null || num === undefined) {
+        throw new Error("Function takes 1 argument, 0 provided");
+    }
     if (!Number.isInteger(num)) {
         throw new Error("Input should be an integer");
     }
