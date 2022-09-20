@@ -1,4 +1,4 @@
-const { makeNegative } = require("./negativise-numbers")
+const { makeNegative } = require("./negate-numbers")
 
 describe("makeNegative", () => {
     test("Positive input", () => {
