@@ -1,0 +1,24 @@
+{
+  "name": "futureproof-week-4-kata-challenges",
+  "version": "1.0.0",
+  "description": "Switch branches to see each challenge.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsaiz97/futureproof-week-4-kata-challenges.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fsaiz97/futureproof-week-4-kata-challenges/issues"
+  },
+  "homepage": "https://github.com/fsaiz97/futureproof-week-4-kata-challenges#readme",
+  "devDependencies": {
+    "jest": "^29.0.3",
+    "jest-each": "^29.0.3"
+  }
+}
