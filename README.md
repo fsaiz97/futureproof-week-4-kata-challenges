@@ -1,3 +1,7 @@
-# Kata Challenges
+# Negate numbers
 
-Switch branches to see each challenge.
+Takes an integer and returns the negative of that number.
+
+# Signature
+
+`makeNegative(num)`
