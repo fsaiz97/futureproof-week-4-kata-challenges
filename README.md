@@ -1,3 +1,7 @@
-# Kata Challenges
+# Reverse string
 
-Switch branches to see each challenge.
+Takes a string as argument and returns the reversed string
+
+# Signature
+
+`reverseString(str)`
