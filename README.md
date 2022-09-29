@@ -4,4 +4,10 @@ Given a list of people and how much they spent on a shared bill, the function re
 
 # Signature
 
-`splitTheBill(group)
+`splitTheBill(group)`
+
+```
+group = {
+    name: number
+}
+```

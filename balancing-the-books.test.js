@@ -16,9 +16,30 @@ describe("splitTheBill tests", () => {
         }).toThrow(new Error("Function expects 1 argument. 4 recieved."))
     })
 
-    // it("Throws an error when not passed a group with the proper format", () => {
-    //     splitTheBill({A: })
-    // })
+    it("Throws an error when not passed a group with the proper format", () => {
+        expect(() => {
+            splitTheBill({A: "1", B: 3});
+        }).toThrow(new Error("Invalid input format. {name: integer, ...} expected"))
+
+        expect(() => {
+            splitTheBill({A: 1, B: [1, 2]});
+        }).toThrow(new Error("Invalid input format. {name: integer, ...} expected"))
+
+        expect(() => {
+            splitTheBill({A: 1, B: true});
+        }).toThrow(new Error("Invalid input format. {name: integer, ...} expected"))
+
+        expect(() => {
+            splitTheBill({A: 1, B: {C: 12, V: 3}});
+        }).toThrow(new Error("Invalid input format. {name: integer, ...} expected"))
+
+    })
+
+    it("Throws an error when if given a negative number in the group", () => {
+        expect(() => {
+            split({A: 10, B: -1})
+        }).toThrow(new Error("Object values must be positive"));
+    })
 
     each([]).test("Returns %s when passed %s", (expected, group) => {
         expect(splitTheBill(group)).toBe(expected);

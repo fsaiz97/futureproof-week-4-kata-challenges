@@ -1,4 +1,4 @@
-// { "name": "amountPaid", ...}
+// { name: number, ... }
 
 function splitTheBill(group) {
 
