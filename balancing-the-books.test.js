@@ -41,7 +41,9 @@ describe("splitTheBill tests", () => {
         }).toThrow(new Error("Object values must be positive"));
     })
 
-    each([]).test("Returns %s when passed %s", (expected, group) => {
-        expect(splitTheBill(group)).toBe(expected);
+    each([
+        [{A: 5, B: 0, C: -5}, {A: 20, B: 15, C: 10}]
+    ]).test("Returns %s when passed %s", (expected, group) => {
+        expect(splitTheBill(group)).toEqual(expected);
     })
 })
