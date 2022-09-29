@@ -37,12 +37,13 @@ describe("splitTheBill tests", () => {
 
     it("Throws an error when if given a negative number in the group", () => {
         expect(() => {
-            split({A: 10, B: -1})
+            splitTheBill({A: 10, B: -1})
         }).toThrow(new Error("Object values must be positive"));
     })
 
     each([
-        [{A: 5, B: 0, C: -5}, {A: 20, B: 15, C: 10}]
+        [{A: 5, B: 0, C: -5}, {A: 20, B: 15, C: 10}],
+        [{A: -5.53, B: 5.38, C: 0.15}, {A: 4.32, B: 15.235, C: 10}]
     ]).test("Returns %s when passed %s", (expected, group) => {
         expect(splitTheBill(group)).toEqual(expected);
     })
